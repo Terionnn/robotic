@@ -287,34 +287,76 @@
       effort="100"
       velocity="5" />
   </joint>
-  <link
-    name="link6">
+   <link name="link6">
     <inertial>
       <origin xyz="-8.82590762930069E-05 9.0598378529832E-06 -0.002" rpy="0 0 0" />
       <mass value="0.00699089613564366" />
-      <inertia ixx="5.73015540542155E-07" ixy="-1.98305403089247E-22" ixz="-7.2791893904596E-23" iyy="5.73015540542155E-07" iyz="-3.4146026640245E-24" izz="1.06738869138926E-06" />
+      <inertia 
+        ixx="5.73015540542155E-07" 
+        ixy="-1.98305403089247E-22" 
+        ixz="-7.2791893904596E-23" 
+        iyy="5.73015540542155E-07" 
+        iyz="-3.4146026640245E-24" 
+        izz="1.06738869138926E-06" />
     </inertial>
     <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 -0.038" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://piper_description/meshes/link6.STL" />
+        <mesh filename="file://$(find piper_description)/meshes/link6.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      <material name="">
+        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 -0.038" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://piper_description/meshes/link6.STL" />
+        <mesh filename="file://$(find piper_description)/meshes/link6.STL" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 -0.035" rpy="0 0 -1.57" />
+      <geometry>
+        <mesh filename="file://$(find piper_description)/meshes/robot_efector.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.819 0.933 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.035" rpy="0 0 -1.57" />
+      <geometry>
+        <mesh filename="file://$(find piper_description)/meshes/robot_efector.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0.0175 0 -0.035" rpy="0 1.57 3.14" />
+      <geometry>
+        <mesh filename="file://$(find piper_description)/meshes/camera_holder.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.819 0.933 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0175 0 -0.035" rpy="0 1.57 3.14" />
+      <geometry>
+        <mesh filename="file://$(find piper_description)/meshes/camera_holder.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual>
+    <origin xyz="-0.048 0 -0.037" rpy="3.14 3.14 -1.57" />  
+        <geometry>
+         <mesh filename="file://$(find piper_description)/meshes/camera.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.819 0.933 1" />
+      </material>
+    </visual>
+    <collision>
+    <origin xyz="-0.048 0 -0.037" rpy="3.14 3.14 -1.57" />  
+        <geometry>
+         <mesh filename="file://$(find piper_description)/meshes/camera.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -322,7 +364,7 @@
     name="joint6"
     type="revolute">
     <origin
-      xyz="8.8259E-05 -0.091 0"
+      xyz="8.8259E-05 -0.129 0"
       rpy="1.5708 0 0" />
     <parent
       link="link5" />
